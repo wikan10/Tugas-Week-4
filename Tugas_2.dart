@@ -6,7 +6,7 @@ void main() {
   print("2. Reamur ke Celsius");
   print("3. Kelvin ke Celsius");
 
-  num choice = num.parse(stdin.readLineSync()!);
+  int choice = int.parse(stdin.readLineSync()!);
 
   switch (choice) {
     case 1:
@@ -28,15 +28,17 @@ void fahrenheitToCelsius() {
   num fahrenheit = num.parse(stdin.readLineSync()!);
 
   num celsius = (fahrenheit - 32) * 5 / 9;
-  print("$fahrenheit derajat Fahrenheit = $celsius derajat Celsius");
+  print(
+      "$fahrenheit derajat Fahrenheit =${celsius.toStringAsFixed(2)} derajat Celsius");
 }
 
 void reamurToCelsius() {
-  print("Masukkan suhu dalam Réamur:");
+  print("Masukkan suhu dalam Reamur:");
   num reamur = num.parse(stdin.readLineSync()!);
 
   num celsius = reamur * 5 / 4;
-  print("$reamur derajat Reamur = $celsius derajat Celsius");
+  print(
+      "$reamur derajat Reamur = ${celsius.toStringAsFixed(2)} derajat Celsius");
 }
 
 void kelvinToCelsius() {
@@ -44,5 +46,6 @@ void kelvinToCelsius() {
   num kelvin = num.parse(stdin.readLineSync()!);
 
   num celsius = kelvin - 273.15;
-  print("$kelvin derajat Kelvin = $celsius derajat Celsius");
+  print(
+      "$kelvin derajat Kelvin = ${celsius.toStringAsFixed(2)} derajat Celsius");
 }
